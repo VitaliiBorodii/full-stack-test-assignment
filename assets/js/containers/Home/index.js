@@ -19,11 +19,8 @@ class Home extends PureComponent {
 
   render() {
     const {feed} = this.props
-    console.log('props', this.props.feed)
     const categoryNames = Object.keys(feed.feed)
     const hasMore = (!feed.pending && (feed.meta.total > categoryNames.length))
-    console.log('hasMore:', hasMore)
-    console.log(categoryNames)
 
     return (<div className={styles.container}>
       <Header/>
