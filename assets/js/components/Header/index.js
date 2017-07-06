@@ -8,7 +8,6 @@ class Header extends Component {
     e.preventDefault()
     const form = e.currentTarget
     const search = form.search.value
-    console.log('onSearch', search)
     this.props.history.push(`/search?qs=${search}`)
   }
 
