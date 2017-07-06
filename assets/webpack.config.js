@@ -74,6 +74,15 @@ module.exports = {
           }, postCssLoader, 'sass-loader'],
           fallback: 'style-loader'
         })
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name].[ext]'
+          }
+        }]
       }
     ]
   },
