@@ -10,20 +10,19 @@ import Item from './containers/Item'
 import Search from './containers/Search'
 import NotFound from './containers/NotFound'
 
-import Header from './components/Header'
-
 const App = () => (
   <Provider store={Store}>
     <HashRouter>
       <div className="container">
-        <Header/>
-        <Switch>
-          <Route exact path='/' component={Home}/>
-          <Route path='/category/:categoryId' component={Category}/>
-          <Route path='/item/:itemId' component={Item}/>
-          <Route path='/search' component={Search}/>
-          <Route component={NotFound}/>
-        </Switch>
+        <div className="content">
+          <Switch>
+            <Route exact path='/' component={Home}/>
+            <Route path='/category/:categoryId' component={Category}/>
+            <Route path='/item/:itemId' component={Item}/>
+            <Route path='/search' component={Search}/>
+            <Route component={NotFound}/>
+          </Switch>
+        </div>
       </div>
     </HashRouter>
   </Provider>
