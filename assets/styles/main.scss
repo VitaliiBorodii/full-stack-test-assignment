@@ -8,11 +8,16 @@ html, body {
 
 #app-root {
   display: flex;
-  flex: 1;
+  height: 100%;
 }
 
 .container {
   display: flex;
   flex: 1;
   flex-direction: column;
+}
+
+.content {
+  display: flex;
+  flex: 1;
 }
