@@ -13,7 +13,7 @@ import {loadFeed} from '../../actions/feed'
 class Home extends PureComponent {
 
   loadMore = (page) => {
-    this.props.loadFeed(page + 1, 1)
+    this.props.loadFeed(page)
   }
 
   render() {
@@ -25,7 +25,7 @@ class Home extends PureComponent {
       <Header/>
       <div className={styles.infinite}>
         <InfiniteScroll
-          pageStart={feed.meta.page}
+          pageStart={0}
           loadMore={this.loadMore}
           hasMore={hasMore}
           loader={<div className="loader">Loading ...</div>}

@@ -9,19 +9,19 @@ const categories = json.games.reduce((acc, item) => {
 }, {})
 
 
-export const fetchFeed = (limit, page) => {
+export const fetchFeed = (offset) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const response = {
         feed: {},
         meta: {
-          page: page,
-          limit,
+          offset: offset,
           total: json.categories.length
         }
       }
-      for (let i = (page - 1) * limit; i < (page * limit); i++) {
+      for (let i = (offset - 1); i < (offset); i++) {
         const category = json.categories[i]
+        if (!category) break
         response.feed[category] = categories[category]
       }
 

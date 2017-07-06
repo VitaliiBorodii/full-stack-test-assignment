@@ -4,8 +4,7 @@ const initState = {
   pending: false,
   feed: {},
   meta: {
-    page: 0,
-    limit: PAGE_SIZE,
+    offset: 0,
     total: Infinity
   },
   error: null

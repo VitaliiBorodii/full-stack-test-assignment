@@ -2,9 +2,9 @@ import {put, takeEvery} from 'redux-saga/effects'
 import {FETCH_FEED_REQUEST, FETCH_FEED_SUCCESS, FETCH_FEED_ERROR} from '../constants/feed'
 import * as API from '../api/feed'
 
-function* fetchFeed({page, limit}) {
+function* fetchFeed({offset}) {
   try {
-    const response = yield API.fetchFeed(limit, page)
+    const response = yield API.fetchFeed(offset)
     yield put({
       type: FETCH_FEED_SUCCESS,
       ...response
