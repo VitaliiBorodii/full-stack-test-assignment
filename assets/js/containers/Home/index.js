@@ -12,9 +12,8 @@ import {loadFeed} from '../../actions/feed'
 
 class Home extends PureComponent {
 
-  loadMore = () => {
-    const {meta} = this.props.feed
-    this.props.loadFeed(meta.page + 1, 1)
+  loadMore = (page) => {
+    this.props.loadFeed(page + 1, 1)
   }
 
   render() {
@@ -29,7 +28,9 @@ class Home extends PureComponent {
           pageStart={feed.meta.page}
           loadMore={this.loadMore}
           hasMore={hasMore}
-          loader={<div className="loader">Loading ...</div>}>
+          loader={<div className="loader">Loading ...</div>}
+          useWindow={false}
+        >
           {categoryNames.map(key => <Category category={key} key={key} items={feed.feed[key]}/>)}
         </InfiniteScroll>
       </div>
