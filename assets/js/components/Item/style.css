@@ -1,0 +1,31 @@
+.container {
+    min-width: 310px;
+    width: calc(100% - 10px);
+    max-width: 600px;
+    margin: 5px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container:before {
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+    min-width: 0;
+}
+
+.name {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px 5px;
+    font-size: 2em;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #fff;
+}
