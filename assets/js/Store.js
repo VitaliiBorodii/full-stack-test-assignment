@@ -3,6 +3,8 @@ import createSagaMiddleware from 'redux-saga';
 
 import feedReducer from './reducers/feed'
 
+import feedSaga from './sagas/feed'
+
 const sagaMiddleware = createSagaMiddleware();
 
 const reducers = combineReducers({
@@ -15,5 +17,7 @@ const Store = compose(
     sagaMiddleware
   )
 )(createStore)(reducers)
+
+sagaMiddleware.run(feedSaga)
 
 export default Store
