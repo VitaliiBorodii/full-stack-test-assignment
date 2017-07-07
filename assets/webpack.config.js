@@ -76,7 +76,11 @@ module.exports = {
         })
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.svg$/,
+        loader: 'svg-react-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
         use: [{
           loader: 'file-loader',
           options: {
