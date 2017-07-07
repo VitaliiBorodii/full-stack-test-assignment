@@ -1,0 +1,88 @@
+.container {
+    padding: 20px;
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+}
+
+.background {
+    position: relative;
+    width: calc(100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background:before {
+    content: '';
+    display: inline-block;
+    padding-top: 40%;
+}
+
+.link {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    text-decoration: none;
+}
+
+.link-arrow {
+    flex: 0 0 auto;
+    margin: 0 15px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6A25FA;
+
+}
+
+.link-arrow svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    fill: #6A25FA;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+}
+
+.badge {
+    width: 180px;
+    height: 180px;
+    transform: translate3d(30px, -20%, 0);
+    border: 15px solid #fff;
+    flex: 0 0 auto;
+}
+
+.name {
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    color: red;
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    background: #eee;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    font-size: 3em;
+    color: #fff;
+    background-color: green;
+    padding: 20px 40px;
+}
