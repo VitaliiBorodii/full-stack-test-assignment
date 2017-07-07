@@ -17,13 +17,12 @@ class Item extends Component {
 
   render() {
     const {item} = this.props.item
-    console.log(item)
     return (
     item ? <div className={styles.container}>
         <div className={styles.background} style={{backgroundImage: `url(${item.thumb})`}}/>
       <Link to='/' className={styles.link}><div className={cx(styles.linkArrow, 'button')}><BackIcon /></div></Link>
       <div className={styles.info}>
-        <img className={styles.badge}  src={item.thumb_180} />
+        <div className={styles.badge} style={{backgroundImage: `url(${item.thumb_180})`}} />
         <div className={styles.name}>{item.name}</div>
       </div>
       <div className={styles.footer}>

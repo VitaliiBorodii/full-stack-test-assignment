@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import styles from './style.css'
 
@@ -8,10 +9,10 @@ import SubIcon from '../../../icons/ic_subscriptions_black_48px.svg'
 import LibIcon from '../../../icons/ic_perm_media_black_48px.svg'
 
 const Footer = () => (<div className={styles.container}>
-  <div className={styles.item}>
+  <Link to="/" className={styles.item}>
     <HomeIcon className={styles.icon}/>
     <span className={styles.label}>Home</span>
-  </div>
+  </Link>
   <div className={styles.item}>
     <TrendIcon className={styles.icon}/>
     <span className={styles.label}>Trending</span>

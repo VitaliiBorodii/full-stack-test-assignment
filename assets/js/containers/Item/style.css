@@ -7,6 +7,7 @@
 }
 
 .background {
+    min-height: 150px;
     position: relative;
     width: calc(100%);
     background-position: center;
@@ -17,7 +18,7 @@
 .background:before {
     content: '';
     display: inline-block;
-    padding-top: 40%;
+    padding-top: 20%;
 }
 
 .link {
@@ -56,11 +57,20 @@
 }
 
 .badge {
-    width: 180px;
-    height: 180px;
-    transform: translate3d(30px, -20%, 0);
+    width: 25%;
+    max-width: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate3d(5%, -20%, 0);
     border: 15px solid #fff;
     flex: 0 0 auto;
+}
+
+.badge:before {
+    content: '';
+    padding-top: 100%;
+    display: inline-block;
 }
 
 .name {
@@ -70,6 +80,7 @@
     align-items: center;
     font-size: 4em;
     color: red;
+    padding: 10px 10px 10px calc(5% + 10px);
 }
 
 .footer {
@@ -85,4 +96,5 @@
     color: #fff;
     background-color: green;
     padding: 20px 40px;
+    margin: 10px;
 }

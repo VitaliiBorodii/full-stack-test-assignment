@@ -27,9 +27,7 @@ class Home extends PureComponent {
     const categoryNames = Object.keys(feed.feed)
     const hasMore = (!feed.pending && (feed.meta.total > categoryNames.length))
 
-    return (<div className={styles.container}>
-      <Header/>
-      <div className={styles.infinite}>
+    return ( <div className={styles.infinite}>
         <InfiniteScroll
           pageStart={0}
           loadMore={this.loadMore}
@@ -39,8 +37,6 @@ class Home extends PureComponent {
         >
           {categoryNames.map(key => <Category goToItemPage={this.goToItemPage} category={key} key={key} items={feed.feed[key]}/>)}
         </InfiniteScroll>
-      </div>
-      <Footer/>
     </div>)
   }
 }

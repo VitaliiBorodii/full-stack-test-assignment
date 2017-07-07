@@ -12,20 +12,39 @@ import NotFound from './containers/NotFound'
 
 import { RouteTransition } from 'react-router-transition';
 
+import styles from './containers/Home/style.css'
+
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 const App = () => (
   <Provider store={Store}>
     <HashRouter>
       <div className="container">
-        <div className="content">
-          <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route path='/category/:categoryId' component={Category}/>
-            <Route path='/item/:itemId' component={Item}/>
-            <Route path='/search' component={Search}/>
-            <Route component={NotFound}/>
-          </Switch>
-        </div>
+        <Route render={({location, history, match}) => {
+        return (
+          <RouteTransition
+            className="content"
+            pathname={location.pathname}
+            atEnter={{ opacity: .1 }}
+            atLeave={{ opacity: .1 }}
+            atActive={{ opacity: 1 }}
+            spring={{val: 1000}}
+            component={false}
+          >
+          <div className={styles.container}>
+      <Header/>
+            <Switch key={location.key} location={location}>
+              <Route exact path='/' component={Home}/>
+              <Route exact path='/category/:categoryId' component={Category}/>
+              <Route exact path='/item/:itemId' component={Item}/>
+              <Route exact path='/search' component={Search}/>
+              <Route component={NotFound}/>
+            </Switch>
+            <Footer /> </div>
+          </RouteTransition>
+        );
+      }} />
       </div>
     </HashRouter>
   </Provider>
