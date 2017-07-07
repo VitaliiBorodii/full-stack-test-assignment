@@ -9,19 +9,19 @@ import LibIcon from '../../../icons/ic_perm_media_black_48px.svg'
 
 const Footer = () => (<div className={styles.container}>
   <div className={styles.item}>
-    <img className={styles.icon} src={HomeIcon} alt=""/>
+    <HomeIcon className={styles.icon}/>
     <span className={styles.label}>Home</span>
   </div>
   <div className={styles.item}>
-    <img className={styles.icon} src={TrendIcon} alt=""/>
+    <TrendIcon className={styles.icon}/>
     <span className={styles.label}>Trending</span>
   </div>
   <div className={styles.item}>
-    <img className={styles.icon} src={SubIcon} alt=""/>
+    <SubIcon className={styles.icon}/>
     <span className={styles.label}>Subscriptions</span>
   </div>
   <div className={styles.item}>
-    <img className={styles.icon} src={LibIcon} alt=""/>
+    <LibIcon className={styles.icon}/>
     <span className={styles.label}>Library</span>
   </div>
 

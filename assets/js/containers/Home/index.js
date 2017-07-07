@@ -9,11 +9,17 @@ import styles from './style.css'
 import Category from '../../components/Category'
 
 import {loadFeed} from '../../actions/feed'
+import {setCahcedItem} from '../../actions/item'
 
 class Home extends PureComponent {
 
   loadMore = (page) => {
     this.props.loadFeed(page)
+  }
+
+  goToItemPage = (item) => {
+    this.props.setCahcedItem(item)
+    this.props.history.push(`/item/${item.package_id}`)
   }
 
   render() {
@@ -31,7 +37,7 @@ class Home extends PureComponent {
           loader={<div className="loader">Loading ...</div>}
           useWindow={false}
         >
-          {categoryNames.map(key => <Category category={key} key={key} items={feed.feed[key]}/>)}
+          {categoryNames.map(key => <Category goToItemPage={this.goToItemPage} category={key} key={key} items={feed.feed[key]}/>)}
         </InfiniteScroll>
       </div>
       <Footer/>
@@ -46,7 +52,8 @@ const mapStateToProps = (state => {
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  loadFeed
+  loadFeed,
+  setCahcedItem
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -10,6 +10,9 @@ import Item from './containers/Item'
 import Search from './containers/Search'
 import NotFound from './containers/NotFound'
 
+import { RouteTransition } from 'react-router-transition';
+
+
 const App = () => (
   <Provider store={Store}>
     <HashRouter>

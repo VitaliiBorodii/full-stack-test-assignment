@@ -1,5 +1,49 @@
 .container {
     display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.title {
+    flex: 1;
+    display: flex;
     flex-direction: row;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.title-name {
+    flex: 1;
+    font-size: 3em;
+    text-transform: capitalize;
+    margin: 0 15px;
+}
+
+.title-arrow {
+    flex: 0 0 auto;
+    margin: 0 15px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6A25FA;
+    font-family: sans-serif, monospace;
+}
+
+.title-arrow svg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    fill: #6A25FA;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
     overflow-x: auto;
+    display: flex;
+    flex-direction: row;
 }
