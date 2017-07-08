@@ -18,6 +18,9 @@
     font-size: 3em;
     text-transform: capitalize;
     margin: 0 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .title-arrow {

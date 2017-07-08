@@ -1,3 +1,4 @@
 import React from 'react'
+import styles from './style.css'
 
-export default () => (<div>Not Found</div>)
+export default () => (<div className={styles.container}>Page Not Found!</div>)
