@@ -10,7 +10,6 @@ import Item from './containers/Item'
 import Search from './containers/Search'
 import NotFound from './containers/NotFound'
 
-//import PageTransition from 'react-router-page-transition';
 import { RouteTransition } from 'react-router-transition';
 
 import styles from './containers/Home/style.css'
@@ -33,13 +32,6 @@ const transitions = {
 
 const getTransition = (pathname) => {
   return (pathname === '/') ? transitions.root : transitions.nested
-  if ((/\/item\//).test(pathname)) {
-    return transitions.item
-  } else if ((/\/category\//).test(pathname)) {
-    return transitions.category
-  } else {
-    return transitions.def
-  }
 }
 
 const App = () => (
