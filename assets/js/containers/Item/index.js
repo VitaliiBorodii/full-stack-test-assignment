@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import cx from 'classnames'
 import {fetchItem} from '../../actions/item'
 import styles from './style.css'
-import BackIcon from '../../../icons/ic_chevron_left_black_48px.svg'
+import BackButton from '../../components/BackButton'
 
 class Item extends Component {
 
@@ -18,9 +18,9 @@ class Item extends Component {
   render() {
     const {item} = this.props.item
     return (
-    item ? <div className={styles.container}>
+    item ? <div className={cx(styles.container, 'transition-item')}>
         <div className={styles.background} style={{backgroundImage: `url(${item.thumb})`}}/>
-      <Link to='/' className={styles.link}><div className={cx(styles.linkArrow, 'button')}><BackIcon /></div></Link>
+      <div className={styles.link}><BackButton /></div>
       <div className={styles.info}>
         <div className={styles.badge} style={{backgroundImage: `url(${item.thumb_180})`}} />
         <div className={styles.name}>{item.name}</div>
@@ -28,7 +28,7 @@ class Item extends Component {
       <div className={styles.footer}>
         <div className={cx(styles.button, 'button')}>Play Now</div>
       </div>
-      </div> : <div className={styles.loading}>Loading...</div>
+      </div> : <div className={styles.container} />
     )
   }
 }

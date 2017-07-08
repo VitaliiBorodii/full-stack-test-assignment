@@ -24,30 +24,8 @@
 .link {
     position: absolute;
     top: 40px;
-    left: 40px;
+    left: 20px;
     text-decoration: none;
-}
-
-.link-arrow {
-    flex: 0 0 auto;
-    margin: 0 15px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #6A25FA;
-
-}
-
-.link-arrow svg {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    fill: #6A25FA;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .info {
@@ -78,7 +56,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
+    font-size: 2.5em;
     color: red;
     padding: 10px 10px 10px calc(5% + 10px);
 }
