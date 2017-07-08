@@ -1,0 +1,31 @@
+.container {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.title {
+    flex: 0 0 auto;
+    color: red;
+    text-transform: capitalize;
+    flex-direction: row;
+    display: flex;
+    padding: 5px;
+}
+
+.title-name {
+    flex: 1;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*
+    overflow: auto;
+    */
+}
