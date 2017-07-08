@@ -15,6 +15,6 @@ export const fetchItem = (id) => {
 
       reject(new Error(`Item ${id} was not found`))
 
-    }, Math.random() * 500)
+    }, 200 + (Math.random() * 300))
   })
 }

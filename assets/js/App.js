@@ -10,6 +10,7 @@ import Item from './containers/Item'
 import Search from './containers/Search'
 import NotFound from './containers/NotFound'
 
+//import PageTransition from 'react-router-page-transition';
 import { RouteTransition } from 'react-router-transition';
 
 import styles from './containers/Home/style.css'
@@ -32,8 +33,8 @@ const App = () => (
             spring={{val: 1000}}
             component={false}
           >
-          <div className={styles.container}>
-      <Header/>
+          <div className={'app'}>
+            <Header/>
             <Switch key={location.key} location={location}>
               <Route exact path='/' component={Home}/>
               <Route exact path='/category/:categoryId' component={Category}/>

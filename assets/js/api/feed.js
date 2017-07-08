@@ -26,6 +26,6 @@ export const fetchFeed = (offset) => {
       }
 
       resolve(response)
-    }, Math.random() * 500)
+    }, 200 + (Math.random() * 300))
   })
 }

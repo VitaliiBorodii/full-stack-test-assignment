@@ -5,7 +5,7 @@ export const fetchItem = (id) => ({
   id
 })
 
-export const setCahcedItem = (item) => ({
+export const setCachedItem = (item) => ({
   type: SET_CACHED_ITEM,
   item
 })
