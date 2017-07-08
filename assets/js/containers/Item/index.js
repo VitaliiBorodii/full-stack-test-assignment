@@ -24,7 +24,7 @@ class Item extends Component {
         <div className={styles.background} style={{backgroundImage: `url(${item.thumb})`}}/>
       <div className={styles.link}><BackButton /></div>
       <div className={styles.info}>
-        <div className={styles.badge} style={{backgroundImage: `url(${item.thumb_180})`}} />
+        <div className={styles.badge} style={{backgroundImage: `url(${item.thumb_120})`}} />
         <div className={styles.name}>{item.name}</div>
       </div>
       <div className={styles.footer}>

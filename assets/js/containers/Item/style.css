@@ -36,12 +36,12 @@
 
 .badge {
     width: 25%;
-    max-width: 180px;
+    max-width: 120px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transform: translate3d(5%, -20%, 0);
-    border: 15px solid #fff;
+    transform: translate3d(20%, -20%, 0);
+    outline: 15px solid #fff;
     flex: 0 0 auto;
 }
 

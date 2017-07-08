@@ -18,7 +18,6 @@ export default (state = initState, action) => {
 
     case FETCH_CATEGORY_SUCCESS:
     case SET_CACHED_CATEGORY:
-      console.log(FETCH_CATEGORY_SUCCESS, action.games)
       return {
         ...state,
         games: action.games,

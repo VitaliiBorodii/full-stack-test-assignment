@@ -1,7 +1,7 @@
 .container {
     min-width: 310px;
     width: calc(100% - 10px);
-    max-width: 600px;
+    max-width: 480px;
     margin: 5px;
     position: relative;
     background-position: center;
