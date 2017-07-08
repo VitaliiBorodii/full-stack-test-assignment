@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
 import cx from 'classnames'
+
 import {fetchItem} from '../../actions/item'
-import styles from './style.css'
+
 import BackButton from '../../components/BackButton'
+
+import styles from './style.css'
 
 class Item extends Component {
 

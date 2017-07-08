@@ -2,16 +2,17 @@ import React, {PureComponent} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import InfiniteScroll from 'react-infinite-scroller'
+import cx from 'classnames'
 
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import styles from './style.css'
-import cx from 'classnames'
 import Category from '../../components/Category'
 
 import {loadFeed} from '../../actions/feed'
 import {setCachedItem} from '../../actions/item'
 import {setCachedCategory} from '../../actions/category'
+
+import styles from './style.css'
 
 class Home extends PureComponent {
 

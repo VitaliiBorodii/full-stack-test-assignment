@@ -1,10 +1,12 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
 import cx from 'classnames'
-import styles from './style.css'
+
 import Item from '../Item'
+
 import ForwardIcon from '../../../icons/ic_chevron_right_black_48px.svg'
+
+import styles from './style.css'
 
 class Category extends Component {
 
@@ -13,7 +15,7 @@ class Category extends Component {
   }
 
   render() {
-    const {items, category, goToItemPage, goToCategoryPage} = this.props
+    const {items, category, goToItemPage} = this.props
     return (<div className={styles.container}>
       <div onClick={this.goToCategoryPage} className={styles.title}>
         <div className={styles.titleName}>{category}</div>

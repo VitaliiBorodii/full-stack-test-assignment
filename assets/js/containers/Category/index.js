@@ -2,9 +2,12 @@ import React, {Component} from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import cx from 'classnames'
+
 import {fetchCategory} from '../../actions/category'
 import {setCachedItem} from '../../actions/item'
+
 import styles from './style.css'
+
 import Item from '../../components/Item'
 import BackButton from '../../components/BackButton'
 
